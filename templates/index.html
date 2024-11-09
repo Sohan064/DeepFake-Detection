@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deepfake Detection</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Deepfake Detection</h1>
+        <form id="upload-form" action="/upload" method="POST" enctype="multipart/form-data">
+            <label for="image">Upload an Image:</label>
+            <input type="file" id="image" name="image" accept="image/*" required>
+            <div id="preview-container">
+                <img id="preview" src="" alt="Image Preview" style="display: none;">
+            </div>
+            <button type="submit">Analyze Image</button>
+        </form>
+        <div id="result"></div>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html>
